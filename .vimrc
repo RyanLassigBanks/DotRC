@@ -51,6 +51,7 @@ Plug 'uarun/vim-protobuf'
 Plug 'cespare/vim-toml'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'rust-lang/rust.vim'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -115,6 +116,10 @@ let g:ale_lint_on_text_changed='always'
 let g:ale_linters = {'rust': ['cargo']}
 let g:ale_rust_cargo_use_check=1
 
+"rust-lang/rust
+
+let g:rustfmt_options = "--edition 2018"
+
 "vim-jsx
 "
 let g:jsx_ext_required = 0
@@ -133,6 +138,7 @@ map <leader>f :Files<C-m>
 map rg :Find<Space>
 map <leader>v :vsp<C-m><Tab>
 map <leader>s :sp<C-m><Tab>
+map r :windo e<C-m>
 inoremap jj <ESC>
 
 "Highlight line when character length is over limit
